@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+
+```
+<meta charset="UTF-8" />
+
+<title>UNIPAR - Universidade Paranaense</title>
+
+<style type="text/css">
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background-color: #f4f6f8;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333333;
+    }
+
+    #cabecalho {
+        width: 100%;
+        min-height: 90px;
+        background: linear-gradient(135deg, #d71920, #ff4d4d);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.20);
+    }
+
+    .titulo {
+        font-size: 38px;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 2px;
+    }
+
+    .subtitulo {
+        color: white;
+        font-size: 14px;
+        margin-top: 4px;
+        opacity: 0.9;
+    }
+
+    .links {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 10px 18px;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+
+    .links a:hover {
+        background-color: white;
+        color: #d71920;
+    }
+
+    #principal {
+        display: flex;
+        max-width: 1400px;
+        margin: 30px auto;
+        padding: 0 20px;
+        gap: 25px;
+    }
+
+    #menu {
+        width: 260px;
+        min-width: 260px;
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+        height: fit-content;
+    }
+
+    #menu h3 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 21px;
+        color: #d71920;
+        border-bottom: 2px solid #eeeeee;
+        padding-bottom: 12px;
+    }
+
+    .menu-item {
+        display: block;
+        color: #444444;
+        text-decoration: none;
+        padding: 11px 12px;
+        margin-bottom: 5px;
+        border-radius: 6px;
+        transition: 0.3s;
+        font-size: 15px;
+    }
+
+    .menu-item:hover {
+        background-color: #d71920;
+        color: white;
+        padding-left: 18px;
+    }
+
+    #conteudo {
+        flex: 1;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    #conteudo h1 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        color: #222222;
+        font-size: 30px;
+    }
+
+    .descricao {
+        color: #777777;
+        margin-bottom: 25px;
+    }
+
+    .mapa-container {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .mapa-container iframe {
+        width: 100%;
+        height: 400px;
+        border: 0;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    .secao-titulo {
+        font-size: 22px;
+        color: #d71920;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        border-left: 5px solid #d71920;
+        padding-left: 12px;
+    }
+
+    .tabela-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: white;
+        margin-top: 10px;
+    }
+
+    th {
+        background-color: #d71920;
+        color: white;
+        text-align: left;
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    td {
+        border-bottom: 1px solid #dddddd;
+        padding: 14px;
+        font-size: 14px;
+        vertical-align: top;
+    }
+
+    tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+
+    tr:hover {
+        background-color: #fff1f1;
+    }
+
+    .video-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        max-width: 800px;
+        height: 430px;
+        border: 0;
+        border-radius: 10px;
+        display: block;
+        margin: auto;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    #rodape {
+        width: 100%;
+        background-color: #222222;
+        color: white;
+        text-align: center;
+        padding: 25px 10px;
+        margin-top: 40px;
+        font-size: 14px;
+    }
+
+    #rodape strong {
+        color: #ff4d4d;
+    }
+
+    @media (max-width: 900px) {
+
+        #principal {
+            flex-direction: column;
+        }
+
+        #menu {
+            width: 100%;
+            min-width: 0;
+        }
+
+        #cabecalho {
+            padding: 20px;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        #cabecalho {
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .titulo {
+            font-size: 30px;
+        }
+
+        .links {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #principal {
+            padding: 0 10px;
+            margin-top: 15px;
+        }
+
+        #conteudo {
+            padding: 20px;
+        }
+
+        #conteudo h1 {
+            font-size: 24px;
+        }
+
+        .mapa-container iframe {
+            height: 300px;
+        }
+
+        .video-container iframe {
+            height: 250px;
+        }
+    }
+
+</style>
+```
+
+</h:head>
+
+<h:body>
+
+```
+<div id="cabecalho">
+
+    <div>
+
+        <div class="titulo">
+            UNIPAR
+        </div>
+
+        <div class="subtitulo">
+            Universidade Paranaense
+        </div>
+
+    </div>
+
+    <div class="links">
+
+        <h:link outcome="Contato" value="Contato" />
+
+        <h:link outcome="Cursos" value="Cursos" />
+
+    </div>
+
+</div>
+
+
+<div id="principal">
+
+    <div id="menu">
+
+        <h3>📍 Unidades</h3>
+
+        <a class="menu-item"
+           href="https://www.unipar.br/unidades/umuarama/campus-i-sede/">
+            Umuarama
+        </a>
+
+        <a class="menu-item"
+           href="https://www.unipar.br/unidades/umuarama/campus-ii/">
+            Umuarama 2
+        </a>
+
+        <a class="menu-item"
+           href="https://www.unipar.br/unidades/umuarama/campus-iii/">
+            Umuarama 3
+        </a>
+
+        <a class="menu-item"
+           href="https://www.unipar.br/unidades/cianorte/campus-i/">
+            Cianorte
+        </a>
+
+        <a class="menu-item"
+           href="https://www.unipar.br/unidades/toledo/campus-i/">
+            Toledo
+        </a>
+
+        <a class="menu-item"
+           href="https://www.unipar.br/unidades/guaira/campus-i/">
+            Guaíra
+        </a>
+
+        <a class="menu-item"
+           href="https://www.unipar.br/unidades/paranavai/campus-i/">
+            Paranavaí
+        </a>
+
+        <a class="menu-item"
+           href="https://www.unipar.br/unidades/cascavel/campus-i/">
+            Cascavel
+        </a>
+
+        <a class="menu-item"
+           href="https://www.unipar.br/unidades/francisco-beltrao/campus-i/">
+            Francisco Beltrão
+        </a>
+
+    </div>
+
+
+    <div id="conteudo">
+
+        <h1>Localização UNIPAR Paranavaí</h1>
+
+        <p class="descricao">
+            Confira a localização da Universidade Paranaense,
+            Campus Paranavaí, e consulte os endereços das demais unidades.
+        </p>
+
+
+        <div class="mapa-container">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.492213244014!2d-52.44054902383808!3d-23.079070844052474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949295d3c8ff7b29%3A0xee524602f946810a!2sUNIPAR%20-%20Universidade%20Paranaense%20-%20Paranava%C3%AD!5e0!3m2!1spt-BR!2sbr!4v1743704464485!5m2!1spt-BR!2sbr"
+                allowfullscreen="allowfullscreen"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
+
+        <div class="secao-titulo">
+            Endereços das Unidades
+        </div>
+
+        <div class="tabela-container">
+
+            <table>
+
+                <tr>
+                    <th>Cidade</th>
+                    <th>Endereço</th>
+                </tr>
+
+                <tr>
+                    <td>Umuarama</td>
+                    <td>Praça Mascarenhas de Moraes, 4282 - Zona III - Umuarama, PR</td>
+                </tr>
+
+                <tr>
+                    <td>Umuarama</td>
+                    <td>Rod. PR 480, Km 14, s/n - Bonfim - Umuarama, PR</td>
+                </tr>
+
+                <tr>
+                    <td>Cianorte</td>
+                    <td>Av. Brasil, 1123 - Zona 1 - Cianorte, PR</td>
+                </tr>
+
+                <tr>
+                    <td>Toledo</td>
+                    <td>Av. Parigot de Souza, 3636 - Jardim Prada - Toledo, PR</td>
+                </tr>
+
+                <tr>
+                    <td>Guaíra</td>
+                    <td>Rua Carlos Gomes, 558 - Guaíra, PR</td>
+                </tr>
+
+                <tr>
+                    <td>Paranavaí</td>
+                    <td>Av. Humberto Bruning, 360 - Jardim Santos Dumont - Paranavaí, PR</td>
+                </tr>
+
+                <tr>
+                    <td>Cascavel</td>
+                    <td>Rua Rui Barbosa, 611 - Jardim Cristal - Cascavel, PR</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <div class="secao-titulo">
+            Conheça a UNIPAR
+        </div>
+
+        <div class="video-container">
+
+            <iframe
+                src="https://www.youtube.com/embed/7f-caAVzdNI"
+                allowfullscreen="allowfullscreen">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div id="rodape">
+
+    Desenvolvido por <strong>Luiz</strong> -
+    Projeto acadêmico UNIPAR
+
+</div>
+```
+
+</h:body>
+
+</html>

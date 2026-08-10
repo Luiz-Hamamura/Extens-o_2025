@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+
+```
+<meta charset="UTF-8" />
+
+<title>Contato - UNIPAR</title>
+
+<style type="text/css">
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background-color: #f4f6f8;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333333;
+    }
+
+    #cabecalho {
+        width: 100%;
+        min-height: 90px;
+        background: linear-gradient(135deg, #d71920, #ff4d4d);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.20);
+    }
+
+    .titulo {
+        font-size: 38px;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 2px;
+    }
+
+    .subtitulo {
+        color: white;
+        font-size: 14px;
+        margin-top: 4px;
+        opacity: 0.9;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 10px 18px;
+        border-radius: 6px;
+    }
+
+    .links a:hover {
+        background-color: white;
+        color: #d71920;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+        display: flex;
+        gap: 25px;
+        align-items: flex-start;
+    }
+
+    #menu {
+        width: 350px;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    #menu h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #d71920;
+        font-size: 24px;
+        border-bottom: 2px solid #eeeeee;
+        padding-bottom: 12px;
+    }
+
+    #menu p {
+        color: #666666;
+        line-height: 1.7;
+        font-size: 15px;
+    }
+
+    .info {
+        margin-top: 25px;
+        padding: 15px;
+        background-color: #fff5f5;
+        border-left: 4px solid #d71920;
+        border-radius: 5px;
+    }
+
+    .info strong {
+        color: #d71920;
+    }
+
+    #conteudo {
+        flex: 1;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    #conteudo h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #222222;
+        font-size: 28px;
+    }
+
+    .descricao {
+        color: #777777;
+        margin-bottom: 25px;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .campo {
+        margin-bottom: 18px;
+    }
+
+    .campo label {
+        display: block;
+        margin-bottom: 7px;
+        font-weight: bold;
+        color: #444444;
+    }
+
+    .campo input,
+    .campo textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #cccccc;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+
+    .campo textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .botao {
+        background: linear-gradient(135deg, #d71920, #ff4d4d);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 13px;
+        border-radius: 6px;
+        width: 100%;
+    }
+
+    .mensagem {
+        display: block;
+        margin-top: 20px;
+        padding: 12px;
+        background-color: #eaf7ed;
+        color: #287a3d;
+        border-left: 4px solid #287a3d;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    #rodape {
+        width: 100%;
+        background-color: #222222;
+        color: white;
+        text-align: center;
+        padding: 25px 10px;
+        margin-top: 40px;
+        font-size: 14px;
+    }
+
+    #rodape strong {
+        color: #ff4d4d;
+    }
+
+    @media (max-width: 750px) {
+
+        #cabecalho {
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .titulo {
+            font-size: 30px;
+        }
+
+        .links {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .container {
+            flex-direction: column;
+            padding: 0 10px;
+            margin-top: 20px;
+        }
+
+        #menu {
+            width: 100%;
+        }
+
+        #conteudo {
+            width: 100%;
+        }
+    }
+
+</style>
+```
+
+</h:head>
+
+<h:body>
+
+```
+<div id="cabecalho">
+
+    <div>
+
+        <div class="titulo">
+            UNIPAR
+        </div>
+
+        <div class="subtitulo">
+            Universidade Paranaense
+        </div>
+
+    </div>
+
+    <div class="links">
+
+        <h:link outcome="index" value="Início" />
+
+        <h:link outcome="Cursos" value="Cursos" />
+
+    </div>
+
+</div>
+
+
+<div class="container">
+
+    <div id="menu">
+
+        <h3>
+            Entre em contato
+        </h3>
+
+        <p>
+            Estamos ansiosos para ouvir você.
+            Seja uma dúvida, sugestão ou apenas um olá,
+            sua mensagem é importante para nós.
+        </p>
+
+        <p>
+            Preencha o formulário ao lado e
+            envie sua mensagem.
+        </p>
+
+        <div class="info">
+
+            <strong>Atendimento</strong>
+
+            <br />
+
+            Nossa equipe está pronta para
+            receber sua mensagem.
+
+        </div>
+
+    </div>
+
+
+    <div id="conteudo">
+
+        <h2>
+            Vamos conversar?
+        </h2>
+
+        <p class="descricao">
+            Preencha os campos abaixo para entrar
+            em contato conosco.
+        </p>
+
+
+        <h:form>
+
+            <div class="formulario">
+
+                <div class="campo">
+
+                    <h:outputLabel
+                        for="nome"
+                        value="Nome:" />
+
+                    <h:inputText
+                        id="nome"
+                        value="#{contato.nome}"
+                        required="true"
+                        requiredMessage="Informe seu nome." />
+
+                </div>
+
+
+                <div class="campo">
+
+                    <h:outputLabel
+                        for="email"
+                        value="E-mail:" />
+
+                    <h:inputText
+                        id="email"
+                        value="#{contato.email}"
+                        required="true"
+                        requiredMessage="Informe seu e-mail." />
+
+                </div>
+
+
+                <div class="campo">
+
+                    <h:outputLabel
+                        for="mensagem"
+                        value="Mensagem:" />
+
+                    <h:inputTextarea
+                        id="mensagem"
+                        value="#{contato.mensagem}"
+                        rows="5"
+                        required="true"
+                        requiredMessage="Digite uma mensagem." />
+
+                </div>
+
+
+                <h:commandButton
+                    value="Enviar mensagem"
+                    action="#{contato.enviar}"
+                    styleClass="botao" />
+
+
+                <h:messages
+                    styleClass="mensagem" />
+
+                <h:outputText
+                    value="#{contato.resposta}"
+                    styleClass="mensagem"
+                    rendered="#{not empty contato.resposta}" />
+
+            </div>
+
+        </h:form>
+
+    </div>
+
+</div>
+
+
+<div id="rodape">
+
+    Desenvolvido por <strong>Luiz</strong> -
+    Projeto acadêmico UNIPAR
+
+</div>
+```
+
+</h:body>
+
+</html>
