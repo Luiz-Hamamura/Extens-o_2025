@@ -52,26 +52,6 @@ Entre os conhecimentos trabalhados estão:
 **Curso:** Sistemas de Informação
 **Tipo:** Projeto de Extensão Universitária
 
-## ▶️ Como executar
-
-### Pré-requisitos
-
-* Java JDK
-* Apache Maven
-* NetBeans ou IDE compatível
-
-### Clonar o repositório
-
-```bash
-git clone https://github.com/Luiz-Hamamura/Extens-o_2025.git
-```
-
-### Abrir o projeto
-
-Abra a pasta do projeto no **NetBeans** e aguarde o Maven carregar as dependências.
-
-Depois, execute o projeto conforme a configuração da aplicação.
-
 ## 📌 Status
 
 🟢 Projeto acadêmico desenvolvido durante o ano de 2025.
