@@ -15,23 +15,6 @@ O projeto foi desenvolvido utilizando **Java** e ferramentas do ecossistema Java
 * 💻 NetBeans
 * 🌐 Java Web
 
-## 📂 Estrutura do projeto
-
-```text
-Extens-o_2025/
-│
-├── src/
-│   └── main/
-│
-├── target/
-│
-├── nb-configuration.xml
-│
-├── pom.xml
-│
-└── README.md
-```
-
 ## 🎯 Objetivos
 
 O projeto teve como objetivo aplicar, na prática, conhecimentos adquiridos durante a graduação, relacionando o desenvolvimento de software com atividades de extensão universitária.
